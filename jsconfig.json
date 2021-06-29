@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"],
+      "test": ["src/test/*"],
+      "src": ["src/*"],
+      "app": ["src/app/*"],
+      "config": ["src/infra/config/*"],
+      "domain": ["src/domain/*"],
+      "infra": ["src/infra/*"],
+      "interfaces": ["src/interfaces/*"],
+      "routes": ["src/interfaces/http/routes/*"],
+    }
+  },
+  "exclude": ["node_modules", "**/node_modules/*", "dist", "doc", "client"]
+}
