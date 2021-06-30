@@ -11,6 +11,8 @@
       "config": ["src/infra/config/*"],
       "domain": ["src/domain/*"],
       "infra": ["src/infra/*"],
+      "helpers": ["src/helpers/*"],
+      "common": ["src/common/*"],
       "interfaces": ["src/interfaces/*"],
       "routes": ["src/interfaces/http/routes/*"],
     }
