@@ -1,4 +1,5 @@
 # Assignment Checker API
+![](https://https://github.com/georgeben/assignment-checker/workflows/Continuous-Integration/badge.svg)
 Compare assignment submissions for similarity. 
 
 ## Getting started
