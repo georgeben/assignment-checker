@@ -3,10 +3,12 @@ import { makeInvoker } from "awilix-express";
 import AssignmentController from "interfaces/http/controllers/AssignmentController";
 import catchErrors from "interfaces/http/middleware/catchErrors";
 import MethodNotAllowed from "interfaces/http/middleware/methodNotAllowed";
+import CheckAuthentication from "interfaces/http/middleware/checkAuthentication";
 import { multiUpload } from "interfaces/http/middleware/fileUploader";
 
 const router = Router();
 const api = makeInvoker(AssignmentController);
+const authPolicy = makeInvoker(CheckAuthentication);
 
 router
   .route("/")
@@ -18,6 +20,7 @@ router
 router
   .route("/compare")
   .post(
+    authPolicy("isLoggedIn"),
     multiUpload({
       fields: [
         { name: "first_assignment", maxCount: 1 },
@@ -31,6 +34,7 @@ router
 router
   .route("/history")
   .get(
+    authPolicy("isLoggedIn"),
     catchErrors(api("getHistory")),
   )
   .all(MethodNotAllowed);

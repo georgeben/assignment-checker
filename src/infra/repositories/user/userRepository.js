@@ -17,6 +17,10 @@ class UserRepository {
   async getByEmail(email) {
     return this.User.findOne({ email });
   }
+
+  async findById(id) {
+    return this.User.findById(id);
+  }
 }
 
 export default UserRepository;
