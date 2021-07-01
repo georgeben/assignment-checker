@@ -21,13 +21,6 @@ const config = {
     env: "HTTP_PORT",
     sensitive: false,
   },
-  grpcPort: {
-    doc: "The grpc port to bind",
-    format: "port",
-    default: 30015,
-    env: "GRPC_PORT",
-    sensitive: false,
-  },
   bodyLimit: {
     doc: "The maximum size of request bodies (json)",
     format: "*",

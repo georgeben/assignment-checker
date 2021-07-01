@@ -31,7 +31,7 @@ COPY --from=0 /home/node/assignment_checker/node_modules /home/node/assignment_c
 
 COPY --chown=node:node . .
 
-RUN npm run build && npm run docs:api
+RUN npm run build
 
 ENV NODE_ENV production
 

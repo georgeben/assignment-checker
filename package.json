@@ -8,7 +8,8 @@
     "prestart": "npm run build",
     "start:dev": "nodemon \"src/index.js\"",
     "start": "cross-env NODE_ENV=production pm2-runtime start ecosystem.config.js --env production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/.bin/eslint \"./src/**/*.js\""
   },
   "author": "George Benjamin",
   "license": "ISC",
