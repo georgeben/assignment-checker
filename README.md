@@ -1,16 +1,18 @@
 # Assignment Checker API
-![](https://https://github.com/georgeben/assignment-checker/workflows/Continuous-Integration/badge.svg)
+[![Continuous-Integration](https://github.com/georgeben/assignment-checker/actions/workflows/ci.yml/badge.svg)](https://github.com/georgeben/assignment-checker/actions/workflows/ci.yml)  
 Compare assignment submissions for **lexical** similarity. 
 
 ## Getting started
 Follow the instructions given below to get this project up and running on your local machine.
 
-## Technologies
+## Tools & Technologies
 - Javascript
 - Node.js
 - Express.js 
 - MongoDB
 - Docker
+- Github Actions
+- Heroku
 
 ## Architecture
 - Clean Architecture
