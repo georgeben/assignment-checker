@@ -15,10 +15,10 @@ class UserController extends BaseController {
   }
 
   async login(req, res) {
-    const user = await this.loginUser.execute(req.body);
+    const response = await this.loginUser.execute(req.body);
     return this.responseBuilder
       .getResponseHandler(res)
-      .onSuccess({ user }, "Successfully logged in.");
+      .onSuccess(response, "Successfully logged in.");
   }
 }
 

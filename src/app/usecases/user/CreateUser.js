@@ -1,3 +1,4 @@
+import HTTP_STATUS from "http-status-codes";
 import UseCase from "../../UseCase";
 
 class CreateUser extends UseCase {
@@ -22,7 +23,13 @@ class CreateUser extends UseCase {
       e.name = "ValidationError";
       throw e;
     }
-
+    const existingUser = await this.userRepository.getByEmail(email);
+    if (existingUser) {
+      const e = new Error("User with email already exists");
+      e.name = "ConflictError";
+      e.status = HTTP_STATUS.CONFLICT;
+      throw e;
+    }
     let user = await this.User.create({ email, password });
     user = await this.userRepository.save(user);
     return user;

@@ -11,13 +11,6 @@ const api = makeInvoker(AssignmentController);
 const authPolicy = makeInvoker(CheckAuthentication);
 
 router
-  .route("/")
-  .get(
-    catchErrors(api("get")),
-  )
-  .all(MethodNotAllowed);
-
-router
   .route("/compare")
   .post(
     authPolicy("isLoggedIn"),
