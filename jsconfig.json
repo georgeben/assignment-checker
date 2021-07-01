@@ -8,7 +8,7 @@
       "test": ["src/test/*"],
       "src": ["src/*"],
       "app": ["src/app/*"],
-      "config": ["src/infra/config/*"],
+      "config": ["src/config/*"],
       "domain": ["src/domain/*"],
       "infra": ["src/infra/*"],
       "helpers": ["src/helpers/*"],

@@ -16,6 +16,12 @@ module.exports = {
     quotes: [2, "double", { avoidEscape: true }],
     "import/prefer-default-export": "off",
     "class-methods-use-this": "off",
+    "no-underscore-dangle": [
+      "error",
+      {
+        allow: ["_id", "__v", "_require"],
+      },
+    ],
   },
   settings: {
     "import/resolver": {

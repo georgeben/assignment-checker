@@ -21,7 +21,7 @@ const plugins = () => {
           app: "./src/app",
           infra: "./src/infra/",
           helpers: "./src/helpers/",
-          config: "./src/infra/config/",
+          config: "./src/config/",
           domain: "./src/domain/",
           common: "./src/common/",
           interfaces: "./src/interfaces/",

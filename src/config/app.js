@@ -1,4 +1,4 @@
-const { version } = require("../../../package.json");
+const { version } = require("../../package.json");
 
 const config = {
   serviceName: {
@@ -55,6 +55,13 @@ const config = {
     default: "*",
     env: "ALLOWED_ORIGINS",
     sensitive: false,
+  },
+  jwtSecret: {
+    doc: "Secret key for signing JWT",
+    format: "*",
+    default: null,
+    env: "JWT_SECRET",
+    sensitive: true,
   },
 };
 

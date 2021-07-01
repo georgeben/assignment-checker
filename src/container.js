@@ -2,7 +2,7 @@ import {
   createContainer, asClass, InjectionMode, Lifetime, asFunction, asValue,
 } from "awilix";
 import { scopePerRequest } from "awilix-express";
-import config from "infra/config";
+import config from "config";
 import database from "infra/database";
 import mongodbModels from "infra/database/mongo/models";
 import log from "infra/logger";

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import config from "infra/config";
+import config from "config";
 import log from "infra/logger";
 
 /**
