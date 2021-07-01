@@ -28,4 +28,11 @@ router
   )
   .all(MethodNotAllowed);
 
+router
+  .route("/history")
+  .get(
+    catchErrors(api("getHistory")),
+  )
+  .all(MethodNotAllowed);
+
 export default router;

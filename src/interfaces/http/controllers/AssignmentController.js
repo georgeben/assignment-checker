@@ -3,9 +3,10 @@ import InvalidPayloadError from "../errors/InvalidPayloadError";
 import BaseController from "./BaseController";
 
 class AssignmentController extends BaseController {
-  constructor({ compareAssignments }) {
+  constructor({ compareAssignments, getPreviousComparisons }) {
     super();
     this.compareAssignments = compareAssignments;
+    this.getPreviousComparisons = getPreviousComparisons;
   }
 
   async compare(req, res) {
@@ -33,6 +34,13 @@ class AssignmentController extends BaseController {
     return this.responseBuilder
       .getResponseHandler(res)
       .onSuccess({ result }, "Successfully compared submissions.");
+  }
+
+  async getHistory(req, res) {
+    const history = await this.getPreviousComparisons.execute();
+    return this.responseBuilder
+      .getResponseHandler(res)
+      .onSuccess({ history }, "Successfully fetched comparison history");
   }
 }
 

@@ -16,6 +16,10 @@ class HistoryRepository {
     const history = new this.History(data);
     return history.save();
   }
+
+  async getAll() {
+    return this.History.find().lean();
+  }
 }
 
 export default HistoryRepository;
