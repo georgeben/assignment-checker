@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import User from "../User";
+import User from "domain/entities/User";
 
 describe("******* Assignment Entity ******", () => {
   it("create", async () => {

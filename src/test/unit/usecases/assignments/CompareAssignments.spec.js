@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import CompareAssignments from "../CompareAssignments";
+import CompareAssignments from "app/usecases/assignments/CompareAssignments";
 
 describe("********** CompareAssignments use case ********", () => {
   const Assignment = {

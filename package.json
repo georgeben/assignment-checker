@@ -8,7 +8,7 @@
     "prestart": "npm run build",
     "start:dev": "nodemon \"src/index.js\"",
     "start": "cross-env NODE_ENV=production pm2-runtime start ecosystem.config.js --env production",
-    "test": "NODE_ENV=test nyc --reporter=text --reporter=html --reporter=lcov mocha --require @babel/register \"src/**/**/*.spec.js\" --exit --timeout 20000 --recursive",
+    "test": "NODE_ENV=test nyc --reporter=text --reporter=html --reporter=lcov mocha --require @babel/register \"src/test/**/**/*.spec.js\" --exit --timeout 20000 --recursive",
     "lint": "node_modules/.bin/eslint \"./src/**/*.js\""
   },
   "author": "George Benjamin",
