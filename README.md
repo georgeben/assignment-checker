@@ -1,5 +1,5 @@
 # Assignment Checker API
-Compare assignment submissions for similarity. 
+Compare assignment submissions for **lexical** similarity.
 
 ## Getting started
 Follow the instructions given below to get this project up and running on your local machine.
