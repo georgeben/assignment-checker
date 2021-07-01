@@ -18,7 +18,7 @@ const config = {
     doc: "The rest port to bind",
     format: "port",
     default: 5432,
-    env: "HTTP_PORT",
+    env: "PORT",
     sensitive: false,
   },
   bodyLimit: {
