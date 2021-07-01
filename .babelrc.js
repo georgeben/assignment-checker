@@ -45,4 +45,7 @@ module.exports = {
     ],
   ],
   plugins: plugins(),
+  "ignore": [
+    "**/*.spec.js"
+  ]
 };
